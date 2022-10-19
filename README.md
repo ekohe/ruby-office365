@@ -2,6 +2,8 @@
 
 A simple ruby library to interact with Microsoft Graph and Office 365 API.
 
+- https://developer.microsoft.com/en-us/graph/graph-explorer
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:

@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["encore@ekohe.com"]
 
   spec.summary = "A simple ruby library to interact with Microsoft Graph and Office 365 API."
-  spec.description = "A simple python library to interact with Microsoft Graph and Office 365 API."
+  spec.description = "A simple ruby library to interact with Microsoft Graph and Office 365 API."
   spec.homepage = "https://github.com/ekohe/ruby-office365"
   spec.required_ruby_version = ">= 2.5.0"
 
