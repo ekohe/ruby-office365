@@ -2,6 +2,6 @@
 
 RSpec.describe Office365 do
   it "has a version number" do
-    expect(Office365::VERSION).to eq("0.1.0")
+    expect(Office365::VERSION).to eq("0.1.1")
   end
 end

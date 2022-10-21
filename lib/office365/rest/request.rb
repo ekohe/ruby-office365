@@ -4,7 +4,6 @@ require "faraday"
 require "faraday_middleware"
 require "logger"
 require "json"
-require "pry"
 
 module Office365
   module REST
