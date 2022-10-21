@@ -2,7 +2,8 @@
 
 module Office365
   module Models
-    class Directory < Base
+    class EmailAddress < Base
+      # attr_accessor :name, :address
     end
   end
 end

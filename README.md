@@ -14,15 +14,47 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
     $ gem install ruby-office365
 
-## Usage
+## Configuration
 
-TODO: Write usage instructions here
+You can pass configuration options as a block to `Office365::REST::Client.new`.
 
-## Development
+```ruby
+client = Office365::REST::Client.new do |config|
+  config.tenant_id          = "YOUR_ORG_TENANT_ID"
+  config.client_id          = "YOUR_APP_CLIENT_ID"
+  config.client_secret      = "YOUR_APP_CLIENT_SECRET"
+  config.redirect_uri       = "YOUR_APP_REDIRECT_URL"
+  config.access_token       = "YOUR_ACCESS_TOKEN"
+  config.refresh_token      = "YOUR_REFRESH_TOKEN"
+end
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+## Usage Examples
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+After configuring a `client`, you can do the following things.
+
+**Get Profile (as the authenticated user)**
+
+```ruby
+client.me
+```
+
+**Get all calendars**
+
+```ruby
+client.calendars
+```
+
+**Get all mailbox**
+
+```ruby
+client.messages
+```
+
+## Copyright
+
+Copyright (c) 2022 Encore Shao. See LICENSE for details.
+
 
 ## Contributing
 

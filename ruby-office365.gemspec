@@ -12,6 +12,8 @@ Gem::Specification.new do |spec|
   spec.description = "A simple ruby library to interact with Microsoft Graph and Office 365 API."
   spec.homepage = "https://github.com/ekohe/ruby-office365"
   spec.required_ruby_version = ">= 2.5.0"
+  spec.license = "MIT"
+  spec.post_install_message = "Thanks for installing!"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
@@ -32,7 +34,16 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
+  spec.add_dependency "faraday"
+  spec.add_dependency "faraday_middleware"
 
+  # VCR for testing APIs
+  spec.add_development_dependency "vcr"
+  spec.add_development_dependency "webmock"
+  # Rubocop
+  spec.add_development_dependency "rubocop"
+  # For debug binding.pry
+  spec.add_development_dependency "pry"
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
 end

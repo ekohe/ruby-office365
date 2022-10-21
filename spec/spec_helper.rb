@@ -1,6 +1,19 @@
 # frozen_string_literal: true
 
 require "office365"
+require "pry"
+require "vcr"
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.hook_into :webmock
+  config.ignore_localhost = true
+
+  # Removes all private data (Basic Auth, Set-Cookie headers...)
+  config.before_record do |interaction|
+    interaction.request.headers.delete("Authorization")
+  end
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

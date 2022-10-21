@@ -2,15 +2,21 @@
 
 require_relative "office365/version"
 
-require "office365/config"
+require "office365/utils"
 require "office365/client"
+require "office365/rest"
 require "office365/models"
 
 module Office365
-  API_DOMAIN    = "https://graph.microsoft.com"
+  API_HOST      = "https://graph.microsoft.com"
+  LOGIN_HOST    = "https://login.microsoftonline.com/"
+
+  AUTHORIZE_URL = "common/oauth2/authorize"
+  TOKEN_URL     = "common/oauth2/token"
   API_VERSION   = "v1.0"
-  BASE_URI      = "#{API_DOMAIN}/#{API_VERSION}/"
+  SCOPE         = "User.read Calendars.read Mail.ReadBasic Contacts.Read"
 
   class Error < StandardError; end
+  class InvalidAuthenticationTokenError < StandardError; end
   # Your code goes here...
 end
