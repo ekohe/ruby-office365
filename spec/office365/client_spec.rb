@@ -26,4 +26,11 @@ RSpec.describe Office365::Client do
 
     expect(response.size).to eq(10)
   end
+
+  it "returns my mailbox messages with nextlink" do
+    response = VCR.use_cassette("office365_my_mailbox") { client.messages_with_nextlink }
+
+    expect(response[:next_link]).to eq("https://graph.microsoft.com/v1.0/me/messages?%24top=10&%24skip=10")
+    expect(response[:results].size).to eq(10)
+  end
 end

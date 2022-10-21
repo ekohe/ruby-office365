@@ -16,11 +16,13 @@ module Office365
       end
 
       def get(uri, args: {})
-        response = Faraday.new(url: Office365::API_HOST, headers: headers) do |faraday|
+        r_uri = URI(uri.start_with?("https") ? uri : (Office365::API_HOST + uri))
+
+        response = Faraday.new(url: [r_uri.scheme, "://", r_uri.hostname].join, headers: headers) do |faraday|
           faraday.adapter Faraday.default_adapter
           faraday.response :json
           faraday.response :logger, ::Logger.new($stdout), bodies: true if dev_developement?
-        end.get(uri, *args)
+        end.get(r_uri.request_uri, *args)
 
         resp_body = response.body
         return resp_body if response.status == 200
