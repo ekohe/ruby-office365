@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.microsoft.com/v1.0/me/messages?filter=createdDateTime%20lt%202022-01-01
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true; IEEE754Compatible=false;
+        charset=utf-8
+      Strict-Transport-Security:
+      - max-age=31536000
+      Request-Id:
+      - '09bc1276-0981-44a2-85bc-55a178b586db'
+      Client-Request-Id:
+      - '09bc1276-0981-44a2-85bc-55a178b586db'
+      X-Ms-Ags-Diagnostic:
+      - '{"ServerInfo":{"DataCenter":"Japan East","Slice":"E","Ring":"5","ScaleUnit":"003","RoleInstance":"TYO1EPF00001C82"}}'
+      Date:
+      - Tue, 25 Oct 2022 09:55:11 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users(''feoso946%40hotmail.com'')/messages","value":[{"@odata.etag":"W/\"PAAAABYAAACer+ZeMVsZT5yBglWtXgRZAAAZXC2r\"","id":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAABlcGcUAAACer_ZeMVsZT5yBglWtXgRZAAAAGVwh6gAAAA==","createdDateTime":"2017-12-15T09:56:50Z","lastModifiedDateTime":"2017-12-15T09:56:50Z","changeKey":"PAAAABYAAACer+ZeMVsZT5yBglWtXgRZAAAZXC2r","categories":[],"receivedDateTime":"2017-12-15T09:56:50Z","sentDateTime":"2017-12-15T09:56:50Z","hasAttachments":false,"internetMessageId":null,"subject":null,"importance":"normal","parentFolderId":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgAuAAAD6hLLGa-ZlEeOoweJ8LgGnAEAnq-mXjFbGU_cgYJVrV4EWQAAABlcGcUAAAA=","conversationId":"AQQkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgAQANQdjNmPALIE6YAJmOz4Qn4=","conversationIndex":null,"isDeliveryReceiptRequested":null,"isReadReceiptRequested":null,"isRead":null,"isDraft":true,"webLink":"https://outlook.live.com/owa/?ItemID=AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa%2FZlEeOoweJ8LgGnAcAnq%2FmXjFbGU%2BcgYJVrV4EWQAAABlcGcUAAACer%2BZeMVsZT5yBglWtXgRZAAAAGVwh6gAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem","inferenceClassification":"focused","toRecipients":[],"ccRecipients":[],"bccRecipients":[],"replyTo":[],"flag":{"flagStatus":"notFlagged"}},{"@odata.etag":"W/\"CQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAB2emBH\"","id":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgEMAAAAnq-mXjFbGU_cgYJVrV4EWQAAAFgscqMAAAA=","createdDateTime":"2018-03-21T20:08:12Z","lastModifiedDateTime":"2018-05-06T07:05:27Z","changeKey":"CQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAB2emBH","categories":[],"receivedDateTime":"2018-03-21T20:08:12Z","sentDateTime":"2018-03-21T20:07:57Z","hasAttachments":false,"internetMessageId":"<a57e93b28e4449b883e9e9e632e280c3-JVKUGUBNKBZG6ZBNINMTE7CDIRXECRLNMFUWYUDMMF2GM33SNV6FGZLSOZUWGZKNMVZXGYLHMU======@microsoft.com>","subject":"\u66f4\u65b0\u4f7f\u7528\u6761\u6b3e","importance":"normal","parentFolderId":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgAuAAAD6hLLGa-ZlEeOoweJ8LgGnAEAnq-mXjFbGU_cgYJVrV4EWQAAAgEMAAAA","conversationId":"AQQkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgAQAH9lkS7BU2tGl_oUnl33GHY=","conversationIndex":"AQHTwVBWf2WRLsFTa0aX6hSeXfcYdg==","isDeliveryReceiptRequested":null,"isReadReceiptRequested":false,"isRead":false,"isDraft":false,"webLink":"https://outlook.live.com/owa/?ItemID=AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa%2FZlEeOoweJ8LgGnAcAnq%2FmXjFbGU%2BcgYJVrV4EWQAAAgEMAAAAnq%2FmXjFbGU%2BcgYJVrV4EWQAAAFgscqMAAAA%3D&exvsurl=1&viewmodel=ReadMessageItem","inferenceClassification":"focused","sender":{"emailAddress":{"name":"Microsoft","address":"msa@communication.microsoft.com"}},"from":{"emailAddress":{"name":"Microsoft","address":"msa@communication.microsoft.com"}},"toRecipients":[{"emailAddress":{"name":"feoso946@hotmail.com","address":"feoso946@hotmail.com"}}],"ccRecipients":[],"bccRecipients":[],"replyTo":[],"flag":{"flagStatus":"notFlagged"}},{"@odata.etag":"W/\"CQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAGUh6iJ\"","id":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgEMAAAAnq-mXjFbGU_cgYJVrV4EWQABlIgqDAAAAA==","createdDateTime":"2019-07-16T08:47:06Z","lastModifiedDateTime":"2019-07-16T08:47:07Z","changeKey":"CQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAGUh6iJ","categories":[],"receivedDateTime":"2019-07-16T08:47:07Z","sentDateTime":"2019-07-16T08:46:28Z","hasAttachments":false,"internetMessageId":"<148e0375d321402bbaa0f11356edf006-JVKUGUBNKBZG6ZBNINMTE7CDIRXECRLNMFUWYUDMMF2GM33SNV6EGRDOIF6FG3LUOA======@microsoft.com>","subject":"\u4f7f\u7528\u6761\u6b3e\u66f4\u65b0","importance":"normal","parentFolderId":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgAuAAAD6hLLGa-ZlEeOoweJ8LgGnAEAnq-mXjFbGU_cgYJVrV4EWQAAAgEMAAAA","conversationId":"AQQkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgAQAAuvEwnF-XhNoUAy-NhW-7s=","conversationIndex":"AQHVO7MMC68TCcX9eE2hQDL82Fb/uw==","isDeliveryReceiptRequested":null,"isReadReceiptRequested":false,"isRead":false,"isDraft":false,"webLink":"https://outlook.live.com/owa/?ItemID=AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa%2FZlEeOoweJ8LgGnAcAnq%2FmXjFbGU%2BcgYJVrV4EWQAAAgEMAAAAnq%2FmXjFbGU%2BcgYJVrV4EWQABlIgqDAAAAA%3D%3D&exvsurl=1&viewmodel=ReadMessageItem","inferenceClassification":"focused","sender":{"emailAddress":{"name":"Microsoft","address":"msa@communication.microsoft.com"}},"from":{"emailAddress":{"name":"Microsoft","address":"msa@communication.microsoft.com"}},"toRecipients":[{"emailAddress":{"name":"feoso946@hotmail.com","address":"feoso946@hotmail.com"}}],"ccRecipients":[],"bccRecipients":[],"replyTo":[],"flag":{"flagStatus":"notFlagged"}}]}'
+  recorded_at: Tue, 25 Oct 2022 09:55:12 GMT
+recorded_with: VCR 6.1.0
