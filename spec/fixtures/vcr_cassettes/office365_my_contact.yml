@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.microsoft.com/v1.0/me/contacts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true; IEEE754Compatible=false;
+        charset=utf-8
+      Strict-Transport-Security:
+      - max-age=31536000
+      Request-Id:
+      - e59fc23d-eec8-4228-aab7-818e7d95ca58
+      Client-Request-Id:
+      - e59fc23d-eec8-4228-aab7-818e7d95ca58
+      X-Ms-Ags-Diagnostic:
+      - '{"ServerInfo":{"DataCenter":"Korea Central","Slice":"E","Ring":"3","ScaleUnit":"001","RoleInstance":"SE1PEPF00003EAA"}}'
+      Date:
+      - Tue, 25 Oct 2022 03:15:29 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users(''feoso946%40hotmail.com'')/contacts","value":[{"@odata.etag":"W/\"EQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAAZXDms\"","id":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgEOAAAAnq-mXjFbGU_cgYJVrV4EWQAAABlcLbQAAAA=","createdDateTime":"2017-12-15T09:56:51Z","lastModifiedDateTime":"2017-12-15T09:56:56Z","changeKey":"EQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAAZXDms","categories":[],"parentFolderId":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgAuAAAD6hLLGa-ZlEeOoweJ8LgGnAEAnq-mXjFbGU_cgYJVrV4EWQAAAgEOAAAA","birthday":null,"fileAs":"\u5433,
+        \u7d2b\u7fce","displayName":"\u7d2b\u7fce","givenName":"\u7d2b\u7fce","initials":null,"middleName":null,"nickName":null,"surname":"\u5433","title":null,"yomiGivenName":null,"yomiSurname":null,"yomiCompanyName":null,"generation":null,"imAddresses":[],"jobTitle":null,"companyName":null,"department":null,"officeLocation":null,"profession":null,"businessHomePage":null,"assistantName":null,"manager":null,"homePhones":[],"mobilePhone":null,"businessPhones":[],"spouseName":null,"personalNotes":"","children":[],"emailAddresses":[{"name":"kawafox@hotmail.com","address":"kawafox@hotmail.com"}],"homeAddress":{},"businessAddress":{},"otherAddress":{}},{"@odata.etag":"W/\"EQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAAZXDmt\"","id":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgEOAAAAnq-mXjFbGU_cgYJVrV4EWQAAABlcLbMAAAA=","createdDateTime":"2017-12-15T09:56:51Z","lastModifiedDateTime":"2017-12-15T09:56:58Z","changeKey":"EQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAAZXDmt","categories":[],"parentFolderId":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgAuAAAD6hLLGa-ZlEeOoweJ8LgGnAEAnq-mXjFbGU_cgYJVrV4EWQAAAgEOAAAA","birthday":null,"fileAs":"-\u82f1\u8bed\u5c0f\u5e2e\u624b","displayName":"-\u82f1\u8bed\u5c0f\u5e2e\u624b","givenName":"-\u82f1\u8bed\u5c0f\u5e2e\u624b","initials":null,"middleName":null,"nickName":null,"surname":null,"title":null,"yomiGivenName":null,"yomiSurname":null,"yomiCompanyName":null,"generation":null,"imAddresses":[],"jobTitle":null,"companyName":null,"department":null,"officeLocation":null,"profession":null,"businessHomePage":null,"assistantName":null,"manager":null,"homePhones":[],"mobilePhone":null,"businessPhones":[],"spouseName":null,"personalNotes":"","children":[],"emailAddresses":[],"homeAddress":{},"businessAddress":{},"otherAddress":{}},{"@odata.etag":"W/\"EQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAAZXDmr\"","id":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgEOAAAAnq-mXjFbGU_cgYJVrV4EWQAAABlcLbIAAAA=","createdDateTime":"2017-12-15T09:56:51Z","lastModifiedDateTime":"2017-12-15T09:56:54Z","changeKey":"EQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAAZXDmr","categories":[],"parentFolderId":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgAuAAAD6hLLGa-ZlEeOoweJ8LgGnAEAnq-mXjFbGU_cgYJVrV4EWQAAAgEOAAAA","birthday":null,"fileAs":"\u8717\u725b","displayName":"\u8717\u725b","givenName":null,"initials":null,"middleName":null,"nickName":null,"surname":"\u8717\u725b","title":null,"yomiGivenName":null,"yomiSurname":null,"yomiCompanyName":null,"generation":null,"imAddresses":[],"jobTitle":null,"companyName":null,"department":null,"officeLocation":null,"profession":null,"businessHomePage":null,"assistantName":null,"manager":null,"homePhones":[],"mobilePhone":"13266840981","businessPhones":[],"spouseName":null,"personalNotes":"","children":[],"emailAddresses":[],"homeAddress":{},"businessAddress":{},"otherAddress":{}},{"@odata.etag":"W/\"EQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAAZXDmq\"","id":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgEOAAAAnq-mXjFbGU_cgYJVrV4EWQAAABlcLbEAAAA=","createdDateTime":"2017-12-15T09:56:50Z","lastModifiedDateTime":"2017-12-15T09:56:54Z","changeKey":"EQAAABYAAACer+ZeMVsZT5yBglWtXgRZAAAZXDmq","categories":[],"parentFolderId":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgAuAAAD6hLLGa-ZlEeOoweJ8LgGnAEAnq-mXjFbGU_cgYJVrV4EWQAAAgEOAAAA","birthday":null,"fileAs":"\u9648","displayName":"\u9648","givenName":null,"initials":null,"middleName":null,"nickName":null,"surname":"\u9648","title":null,"yomiGivenName":null,"yomiSurname":null,"yomiCompanyName":null,"generation":null,"imAddresses":[],"jobTitle":null,"companyName":null,"department":null,"officeLocation":null,"profession":null,"businessHomePage":null,"assistantName":null,"manager":null,"homePhones":[],"mobilePhone":"15999681556","businessPhones":[],"spouseName":null,"personalNotes":"","children":[],"emailAddresses":[],"homeAddress":{},"businessAddress":{},"otherAddress":{}}]}'
+  recorded_at: Tue, 25 Oct 2022 03:15:31 GMT
+recorded_with: VCR 6.1.0
