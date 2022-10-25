@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe Office365::Client do
   let(:client) do
     Office365::REST::Client.new do |config|
@@ -27,6 +28,12 @@ RSpec.describe Office365::Client do
     expect(response.size).to eq(10)
   end
 
+  it "returns my contract" do
+    response = VCR.use_cassette("office365_my_contract") { client.contract }
+
+    expect(response.size).to eq(4)
+  end
+
   it "returns my mailbox messages with nextlink" do
     response = VCR.use_cassette("office365_my_mailbox") { client.messages_with_nextlink }
 
@@ -34,3 +41,4 @@ RSpec.describe Office365::Client do
     expect(response[:results].size).to eq(10)
   end
 end
+# rubocop:enable Metrics/BlockLength
