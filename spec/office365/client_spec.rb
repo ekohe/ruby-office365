@@ -78,6 +78,6 @@ RSpec.describe Office365::Client do
   end
 
   xit "be able to refresh token by refresh_token" do
-    expect(client.token_refresh).to eq({})
+    expect(client.refresh_token!).to eq({})
   end
 end

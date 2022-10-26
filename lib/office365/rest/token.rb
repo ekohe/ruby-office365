@@ -22,7 +22,7 @@ module Office365
         [LOGIN_HOST, "/#{tenant_id}/oauth2/v2.0/token"].join
       end
 
-      def token_refresh
+      def refresh_token!
         post(token_url, {
                refresh_token: refresh_token,
                client_id: client_id,
