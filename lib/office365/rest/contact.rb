@@ -3,9 +3,9 @@
 module Office365
   module REST
     module Contact
-      def contact
-        contact_uri = ["/", Office365::API_VERSION, "/me/contacts"].join
-        response = Request.new(access_token, debug: debug).get(contact_uri)
+      def contacts
+        contacts_uri = ["/", Office365::API_VERSION, "/me/contacts"].join
+        response = Request.new(access_token, debug: debug).get(contacts_uri)
 
         response["value"].map { |v| Models::User.new(v) }
       end

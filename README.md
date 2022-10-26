@@ -57,7 +57,7 @@ client.messages_with_nextlink(next_link: true, params: { filter: "createdDateTim
 **Get all contact**
 
 ```ruby
-client.contact
+client.contacts
 ```
 
 ## Copyright

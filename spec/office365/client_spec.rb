@@ -34,7 +34,7 @@ RSpec.describe Office365::Client do
   end
 
   it "returns my contacts" do
-    response = VCR.use_cassette("office365_my_contact") { client.contact }
+    response = VCR.use_cassette("office365_my_contact") { client.contacts }
 
     expect(response.size).to eq(4)
   end
