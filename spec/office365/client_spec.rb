@@ -3,6 +3,7 @@
 RSpec.describe Office365::Client do
   let(:client) do
     Office365::REST::Client.new do |config|
+      config.tenant_id = "12345"
       config.access_token = "token"
     end
   end
@@ -66,5 +67,17 @@ RSpec.describe Office365::Client do
     response = VCR.use_cassette("office365_my_contacts") { client.contacts }
 
     expect(response[:results].size).to eq(1)
+  end
+
+  it "returns authorize URL" do
+    expect(client.authorize_url).to include("https://login.microsoftonline.com/12345/oauth2/v2.0/authorize")
+  end
+
+  it "returns token URL" do
+    expect(client.token_url).to eq("https://login.microsoftonline.com/12345/oauth2/v2.0/token")
+  end
+
+  xit "be able to refresh token by refresh_token" do
+    expect(client.token_refresh).to eq({})
   end
 end

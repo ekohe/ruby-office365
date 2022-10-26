@@ -9,11 +9,9 @@ require "office365/models"
 
 module Office365
   API_HOST      = "https://graph.microsoft.com"
-  LOGIN_HOST    = "https://login.microsoftonline.com/"
-
-  AUTHORIZE_URL = "common/oauth2/authorize"
-  TOKEN_URL     = "common/oauth2/token"
   API_VERSION   = "v1.0"
+
+  LOGIN_HOST    = "https://login.microsoftonline.com"
   SCOPE         = "User.read Calendars.read Mail.ReadBasic Contacts.Read"
 
   class Error < StandardError; end

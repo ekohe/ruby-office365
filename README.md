@@ -132,6 +132,12 @@ irb(main):018:0> response[:results][0].as_json
 }
 ```
 
+**Refresh User Token**
+
+```ruby
+irb(main):005:0> client.refresh_token
+```
+
 ## Copyright
 
 Copyright (c) 2022 Encore Shao. See LICENSE for details.
