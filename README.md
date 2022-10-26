@@ -49,12 +49,20 @@ client.calendars
 
 ```ruby
 client.messages
+client.messages({ filter: "createdDateTime lt 2022-01-01" })
+client.messages_with_nextlink
+client.messages_with_nextlink(next_link: true, params: { filter: "createdDateTime lt 2022-01-01" })
+```
+
+**Get all contact**
+
+```ruby
+client.contacts
 ```
 
 ## Copyright
 
 Copyright (c) 2022 Encore Shao. See LICENSE for details.
-
 
 ## Contributing
 
