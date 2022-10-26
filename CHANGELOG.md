@@ -11,7 +11,14 @@
   - get mailbox `client.messages`
   - get calenders `client.calenders`
 
-## [0.1.1] - (2022-10-21)
+## [0.1.2] - (2022-10-21)
 
 - Integrate REST API to get mailbox with pagination
-  - get mailbox data with next link `client.messages_with_nextlink`
+  - get mailbox data with next link `client.messages({next_link: 'xxx'})`
+  - get mailbox data with next link `client.calenders({next_link: 'xxx'})`
+
+## [0.1.3] - (2022-10-26)
+
+- Integrate REST API to get contacts
+  - get profile `client.contacts`
+  - get contacts data with next link `client.contacts({next_link: 'xxx'})`

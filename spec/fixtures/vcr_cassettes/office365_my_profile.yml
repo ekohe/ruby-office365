@@ -31,18 +31,18 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Request-Id:
-      - b0174523-ef6e-4eb5-b560-265bb365066c
+      - fa08f041-7b24-48de-ae7a-cdb8ef5f442d
       Client-Request-Id:
-      - b0174523-ef6e-4eb5-b560-265bb365066c
+      - fa08f041-7b24-48de-ae7a-cdb8ef5f442d
       X-Ms-Ags-Diagnostic:
-      - '{"ServerInfo":{"DataCenter":"Southeast Asia","Slice":"E","Ring":"5","ScaleUnit":"000","RoleInstance":"SI1PEPF00005D69"}}'
+      - '{"ServerInfo":{"DataCenter":"Korea Central","Slice":"E","Ring":"3","ScaleUnit":"002","RoleInstance":"SE1PEPF00003EBD"}}'
       Odata-Version:
       - '4.0'
       Date:
-      - Fri, 21 Oct 2022 05:53:11 GMT
+      - Wed, 26 Oct 2022 05:11:29 GMT
     body:
       encoding: ASCII-8BIT
       string: '{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users/$entity","displayName":"Andy
         vBox","surname":"Andy","givenName":"vBox","id":"d7e954e0b50095ad","userPrincipalName":"vbox.andy@outlook.com","businessPhones":[],"jobTitle":null,"mail":null,"mobilePhone":null,"officeLocation":null,"preferredLanguage":null}'
-  recorded_at: Fri, 21 Oct 2022 05:53:11 GMT
+  recorded_at: Wed, 26 Oct 2022 05:11:29 GMT
 recorded_with: VCR 6.1.0

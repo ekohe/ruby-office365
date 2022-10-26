@@ -18,31 +18,53 @@ RSpec.describe Office365::Client do
   it "returns my calendars" do
     response = VCR.use_cassette("office365_my_calendars") { client.calendars }
 
-    expect(response.size).to eq(3)
+    expect(response[:results].size).to eq(3)
   end
 
   it "returns my mailbox messages" do
     response = VCR.use_cassette("office365_my_mailbox") { client.messages }
 
-    expect(response.size).to eq(10)
+    expect(response[:results].size).to eq(10)
+  end
+
+  it "returns my mailbox messages with next_link" do
+    response = VCR.use_cassette("office365_my_mailbox_with_next_link") do
+      client.messages({ next_link: "https://graph.microsoft.com/v1.0/me/messages?%24top=10&%24skip=10" })
+    end
+
+    expect(response[:next_link]).to eq("https://graph.microsoft.com/v1.0/me/messages?%24top=10&%24skip=20")
+    expect(response[:results].size).to eq(10)
   end
 
   it "returns my mailbox messages createdDateTime before 2022" do
-    response = VCR.use_cassette("office365_my_mailbox_filter_by_created_date_time") { client.messages({ filter: "createdDateTime lt 2022-01-01" }) }
+    response = VCR.use_cassette("office365_my_mailbox_filter_by_created_date_time") do
+      client.messages({ filter: "createdDateTime lt 2022-01-01" })
+    end
 
-    expect(response.map(&:created_date_time)).to eq(["2017-12-15T09:56:50Z", "2018-03-21T20:08:12Z", "2019-07-16T08:47:06Z"])
+    expect(response[:results].size).to eq(0)
+  end
+
+  it "returns my mailbox messages before 2022-10-01" do
+    response = VCR.use_cassette("office365_my_mailbox_before_2022-10-01") do
+      client.messages({ filter: "createdDateTime lt 2022-10-01" })
+    end
+
+    expect(response[:results].size).to eq(10)
+    expect(response[:results].map(&:created_date_time)).to eq(["2022-05-25T15:10:48Z",
+                                                               "2022-05-25T15:41:54Z",
+                                                               "2022-05-25T15:42:17Z",
+                                                               "2022-05-25T15:59:04Z",
+                                                               "2022-05-27T11:37:33Z",
+                                                               "2022-05-27T15:05:06Z",
+                                                               "2022-05-29T13:17:52Z",
+                                                               "2022-06-01T10:06:31Z",
+                                                               "2022-06-02T15:01:38Z",
+                                                               "2022-06-06T02:20:14Z"])
   end
 
   it "returns my contacts" do
-    response = VCR.use_cassette("office365_my_contact") { client.contacts }
+    response = VCR.use_cassette("office365_my_contacts") { client.contacts }
 
-    expect(response.size).to eq(4)
-  end
-
-  it "returns my mailbox messages with nextlink" do
-    response = VCR.use_cassette("office365_my_mailbox") { client.messages_with_nextlink }
-
-    expect(response[:next_link]).to eq("https://graph.microsoft.com/v1.0/me/messages?%24top=10&%24skip=10")
-    expect(response[:results].size).to eq(10)
+    expect(response[:results].size).to eq(1)
   end
 end
