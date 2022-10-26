@@ -27,22 +27,24 @@ http_interactions:
       Content-Type:
       - application/json; odata.metadata=minimal; odata.streaming=true; IEEE754Compatible=false;
         charset=utf-8
+      Vary:
+      - Accept-Encoding
       Strict-Transport-Security:
       - max-age=31536000
       Request-Id:
-      - 569d3b16-9c3d-4068-9f8b-d43fc784cbec
+      - da217d7f-9fe1-462f-bb9d-9139d3284a8c
       Client-Request-Id:
-      - 569d3b16-9c3d-4068-9f8b-d43fc784cbec
+      - da217d7f-9fe1-462f-bb9d-9139d3284a8c
       X-Ms-Ags-Diagnostic:
-      - '{"ServerInfo":{"DataCenter":"Southeast Asia","Slice":"E","Ring":"5","ScaleUnit":"000","RoleInstance":"SI1PEPF0000812E"}}'
+      - '{"ServerInfo":{"DataCenter":"Korea Central","Slice":"E","Ring":"3","ScaleUnit":"002","RoleInstance":"SE1PEPF000026AD"}}'
       Date:
-      - Fri, 21 Oct 2022 06:00:23 GMT
+      - Wed, 26 Oct 2022 05:11:29 GMT
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users(''vBox.Andy%40outlook.com'')/calendars","value":[{"id":"AQMkADAwATM3ZmYAZS00ZTU5LWY3NwBjLTAwAi0wMAoARgAAA4QFHqPHk4JJj7ZVaRPCKk4HAJtRzzo1C2FDv4y_PX15zBUAAAIBBgAAAJtRzzo1C2FDv4y_PX15zBUAAAINPQAAAA==","name":"Calendar","color":"auto","hexColor":"","isDefaultCalendar":true,"changeKey":"m1HPOjULYUO/jL49fXnMFQAAAAACag==","canShare":true,"canViewPrivateItems":true,"canEdit":true,"allowedOnlineMeetingProviders":["skypeForConsumer"],"defaultOnlineMeetingProvider":"skypeForConsumer","isTallyingResponses":true,"isRemovable":false,"owner":{"name":"vBox
-        Andy","address":"vBox.Andy@outlook.com"}},{"id":"AQMkADAwATM3ZmYAZS00ZTU5LWY3NwBjLTAwAi0wMAoARgAAA4QFHqPHk4JJj7ZVaRPCKk4HAJtRzzo1C2FDv4y_PX15zBUAAAIBBgAAAJtRzzo1C2FDv4y_PX15zBUAAAINQgAAAA==","name":"United
-        States holidays","color":"auto","hexColor":"","isDefaultCalendar":false,"changeKey":"m1HPOjULYUO/jL49fXnMFQAAAAAKRA==","canShare":false,"canViewPrivateItems":true,"canEdit":false,"allowedOnlineMeetingProviders":[],"defaultOnlineMeetingProvider":"unknown","isTallyingResponses":false,"isRemovable":true,"owner":{"name":"vBox
-        Andy","address":"vBox.Andy@outlook.com"}},{"id":"AQMkADAwATM3ZmYAZS00ZTU5LWY3NwBjLTAwAi0wMAoARgAAA4QFHqPHk4JJj7ZVaRPCKk4HAJtRzzo1C2FDv4y_PX15zBUAAAIBBgAAAJtRzzo1C2FDv4y_PX15zBUAAAINQwAAAA==","name":"Birthdays","color":"auto","hexColor":"","isDefaultCalendar":false,"changeKey":"m1HPOjULYUO/jL49fXnMFQAAAAALMQ==","canShare":false,"canViewPrivateItems":true,"canEdit":false,"allowedOnlineMeetingProviders":[],"defaultOnlineMeetingProvider":"unknown","isTallyingResponses":false,"isRemovable":true,"owner":{"name":"vBox
-        Andy","address":"vBox.Andy@outlook.com"}}]}'
-  recorded_at: Fri, 21 Oct 2022 06:00:23 GMT
+      string: '{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users(''Hello.World%40outlook.com'')/calendars","value":[{"id":"AQMkADAwATM3ZmYAZS00ZTU5LWY3NwBjLTAwAi0wMAoARgAAA4QFHqPHk4JJj7ZVaRPCKk4HAJtRzzo1C2FDv4y_PX15zBUAAAIBBgAAAJtRzzo1C2FDv4y_PX15zBUAAAINPQAAAA==","name":"Calendar","color":"auto","hexColor":"","isDefaultCalendar":true,"changeKey":"m1HPOjULYUO/jL49fXnMFQAAAAACag==","canShare":true,"canViewPrivateItems":true,"canEdit":true,"allowedOnlineMeetingProviders":["skypeForConsumer"],"defaultOnlineMeetingProvider":"skypeForConsumer","isTallyingResponses":true,"isRemovable":false,"owner":{"name":"Hello
+        World","address":"hello.world@mail.com"}},{"id":"AQMkADAwATM3ZmYAZS00ZTU5LWY3NwBjLTAwAi0wMAoARgAAA4QFHqPHk4JJj7ZVaRPCKk4HAJtRzzo1C2FDv4y_PX15zBUAAAIBBgAAAJtRzzo1C2FDv4y_PX15zBUAAAINQgAAAA==","name":"United
+        States holidays","color":"auto","hexColor":"","isDefaultCalendar":false,"changeKey":"m1HPOjULYUO/jL49fXnMFQAAAAAKRA==","canShare":false,"canViewPrivateItems":true,"canEdit":false,"allowedOnlineMeetingProviders":[],"defaultOnlineMeetingProvider":"unknown","isTallyingResponses":false,"isRemovable":true,"owner":{"name":"Hello
+        World","address":"hello.world@mail.com"}},{"id":"AQMkADAwATM3ZmYAZS00ZTU5LWY3NwBjLTAwAi0wMAoARgAAA4QFHqPHk4JJj7ZVaRPCKk4HAJtRzzo1C2FDv4y_PX15zBUAAAIBBgAAAJtRzzo1C2FDv4y_PX15zBUAAAINQwAAAA==","name":"Birthdays","color":"auto","hexColor":"","isDefaultCalendar":false,"changeKey":"m1HPOjULYUO/jL49fXnMFQAAAAALMQ==","canShare":false,"canViewPrivateItems":true,"canEdit":false,"allowedOnlineMeetingProviders":[],"defaultOnlineMeetingProvider":"unknown","isTallyingResponses":false,"isRemovable":true,"owner":{"name":"Hello
+        World","address":"hello.world@mail.com"}}]}'
+  recorded_at: Wed, 26 Oct 2022 05:11:30 GMT
 recorded_with: VCR 6.1.0

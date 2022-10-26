@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.microsoft.com/v1.0/me/contacts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true; IEEE754Compatible=false;
+        charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=31536000
+      Request-Id:
+      - 8dab84e7-13ec-4606-82ae-703b75ce531a
+      Client-Request-Id:
+      - 8dab84e7-13ec-4606-82ae-703b75ce531a
+      X-Ms-Ags-Diagnostic:
+      - '{"ServerInfo":{"DataCenter":"Korea Central","Slice":"E","Ring":"3","ScaleUnit":"000","RoleInstance":"SE1PEPF0000077A"}}'
+      Date:
+      - Wed, 26 Oct 2022 05:18:26 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users(''vBox.Andy%40outlook.com'')/contacts","value":[{"@odata.etag":"W/\"EQAAABYAAACbUc86NQthQ7+Mvj19ecwVAABjabQj\"","id":"AQMkADAwATM3ZmYAZS00ZTU5LWY3NwBjLTAwAi0wMAoARgAAA4QFHqPHk4JJj7ZVaRPCKk4HAJtRzzo1C2FDv4y_PX15zBUAAAIBDgAAAJtRzzo1C2FDv4y_PX15zBUAAABja1I_AAAA","createdDateTime":"2022-10-24T02:48:56Z","lastModifiedDateTime":"2022-10-24T02:48:57Z","changeKey":"EQAAABYAAACbUc86NQthQ7+Mvj19ecwVAABjabQj","categories":[],"parentFolderId":"AQMkADAwATM3ZmYAZS00ZTU5LWY3NwBjLTAwAi0wMAoALgAAA4QFHqPHk4JJj7ZVaRPCKk4BAJtRzzo1C2FDv4y_PX15zBUAAAIBDgAAAA==","birthday":null,"fileAs":"","displayName":"Name
+        S.","givenName":"Name","initials":null,"middleName":null,"nickName":null,"surname":"S.","title":null,"yomiGivenName":null,"yomiSurname":null,"yomiCompanyName":"","generation":null,"imAddresses":[],"jobTitle":"","companyName":null,"department":"","officeLocation":"","profession":null,"businessHomePage":"","assistantName":"","manager":"","homePhones":[],"mobilePhone":"","businessPhones":[],"spouseName":"","personalNotes":"","children":[],"emailAddresses":[{"name":"name@mail.com","address":"name@mail.com"}],"homeAddress":{},"businessAddress":{},"otherAddress":{}}]}'
+  recorded_at: Wed, 26 Oct 2022 05:18:26 GMT
+recorded_with: VCR 6.1.0

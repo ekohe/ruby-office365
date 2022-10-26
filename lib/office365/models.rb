@@ -9,5 +9,6 @@ module Office365
     autoload :User,               "office365/models/user"
     autoload :Owner,              "office365/models/owner"
     autoload :EmailAddress,       "office365/models/email_address"
+    autoload :Contact,            "office365/models/contact"
   end
 end
