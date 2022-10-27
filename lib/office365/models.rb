@@ -10,5 +10,6 @@ module Office365
     autoload :Owner,              "office365/models/owner"
     autoload :EmailAddress,       "office365/models/email_address"
     autoload :Contact,            "office365/models/contact"
+    autoload :AccessToken,        "office365/models/access_token"
   end
 end

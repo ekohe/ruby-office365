@@ -135,7 +135,13 @@ irb(main):018:0> response[:results][0].as_json
 **Refresh User Token**
 
 ```ruby
-irb(main):005:0> client.refresh_token!
+irb(main):005:0> response = client.refresh_token!
+irb(main):005:0> response.scope
+=> "openid User.Read profile email"
+irb(main):005:0> response.access_token
+=> "eyJ0eXAiOiJKV1QiLCJub25jZSI6ImFDYUladFJ6M3RSc3dFaktxUHdGbF9kVlFmbjJabG85Mjlkb2xaeFBhZm8iLCJhbGciOiJSUzI1NiIsIng1dCI6IjJaUXBKM1VwYmpBWVhZR2FYRUpsOGxWMFRPSSIsImtpZCI6IjJaUXBKM1VwYmpBWVhZR2FYRUpsOGxWMFRPSSJ9..."
+irb(main):005:0> response.refresh_token
+=> "0.ARgA7EiQdLv1qECnFqPfrznKsT9ERYaGfG9Ki5WzQtEllj8YAJk.AgABAAEAAAD--DLA3VO7QrddgJg7WevrAgDs_wQA9P-Q1ODlBsrdZi-5s2mfLtEsavBgiEhGcz1KEf26fMrGFU3LM_og5l6wjSAtQ83XHLuje0_KYGol26_LGV_uH0F1MwCFR1N3ctwg4_...."
 ```
 
 ## Copyright

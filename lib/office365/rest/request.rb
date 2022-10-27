@@ -16,36 +16,40 @@ module Office365
       end
 
       def get(uri, args: {})
-        r_uri = URI(uri.start_with?("https") ? uri : (Office365::API_HOST + uri))
+        req_url = URI(uri.start_with?("https") ? uri : (Office365::API_HOST + uri))
 
-        response = Faraday.new(url: [r_uri.scheme, "://", r_uri.hostname].join, headers: headers) do |faraday|
+        response = Faraday.new(url: [req_url.scheme, "://", req_url.hostname].join, headers: headers) do |faraday|
           faraday.adapter Faraday.default_adapter
           faraday.response :json
           faraday.response :logger, ::Logger.new($stdout), bodies: true if dev_developement?
-        end.get(r_uri.request_uri, *args)
+        end.get(req_url.request_uri, *args)
 
-        resp_body = response.body
-        return resp_body if response.status == 200
-        raise InvalidAuthenticationTokenError, resp_body.dig("error", "message") if response.status == 401
-
-        raise Error, resp_body["error"]
+        parse_respond(response)
       end
 
       def post(uri, args)
-        response = Faraday.new(url: Office365::API_HOST, headers: headers) do |faraday|
+        req_url = URI(uri.start_with?("https") ? uri : (Office365::API_HOST + uri))
+
+        response = Faraday.new(url: [req_url.scheme, "://", req_url.hostname].join, headers: post_headers) do |faraday|
           faraday.adapter Faraday.default_adapter
           faraday.response :json
           faraday.response :logger, ::Logger.new($stdout), bodies: true if dev_developement?
-        end.post(uri, args)
+        end.post(req_url.request_uri, args.to_query)
 
-        resp_body = response.body
-        return resp_body if response.status == 200
-        raise InvalidAuthenticationTokenError, resp_body.dig("error", "message") if response.status == 401
-
-        raise Error, resp_body["error"]
+        parse_respond(response)
       end
 
       private
+
+      def parse_respond(response)
+        resp_body = response.body
+
+        return resp_body if response.status == 200
+        raise InvalidAuthenticationTokenError, resp_body.dig("error", "message") if response.status == 401
+        raise InvaliRequestError, resp_body["error_description"] if response.status == 400
+
+        raise Error, resp_body["error"]
+      end
 
       def headers
         {
@@ -56,6 +60,12 @@ module Office365
 
       def dev_developement?
         debug
+      end
+
+      def post_headers
+        {
+          "Content-Type" => "application/x-www-form-urlencoded"
+        }
       end
     end
   end

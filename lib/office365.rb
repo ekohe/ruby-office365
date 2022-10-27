@@ -8,13 +8,14 @@ require "office365/rest"
 require "office365/models"
 
 module Office365
+  class Error < StandardError; end
+  class InvalidAuthenticationTokenError < StandardError; end
+  class InvaliRequestError < StandardError; end
+
   API_HOST      = "https://graph.microsoft.com"
   API_VERSION   = "v1.0"
 
   LOGIN_HOST    = "https://login.microsoftonline.com"
-  SCOPE         = "User.read Calendars.read Mail.ReadBasic Contacts.Read"
-
-  class Error < StandardError; end
-  class InvalidAuthenticationTokenError < StandardError; end
+  SCOPE         = "offline_access User.read Calendars.read Mail.ReadBasic Contacts.Read"
   # Your code goes here...
 end

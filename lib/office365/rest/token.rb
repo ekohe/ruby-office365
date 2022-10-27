@@ -23,13 +23,20 @@ module Office365
       end
 
       def refresh_token!
-        post(token_url, {
-               refresh_token: refresh_token,
-               client_id: client_id,
-               client_secret: client_secret,
-               grant_type: "refresh_token",
-               scope: Office365::SCOPE
-             })
+        Models::AccessToken.new(
+          Request.new(nil, debug: debug).post(token_url, token_params)
+        )
+      end
+
+      private
+
+      def token_params
+        {
+          refresh_token: refresh_token,
+          client_id: client_id,
+          client_secret: client_secret,
+          grant_type: "refresh_token"
+        }
       end
     end
   end

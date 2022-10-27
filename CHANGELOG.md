@@ -23,7 +23,7 @@
   - get profile `client.contacts`
   - get contacts data with next link `client.contacts({next_link: 'xxx'})`
 
-## [0.1.4] - (2022-10-26)
+## [0.1.5] - (2022-10-27)
 
 - Generate URLs for token and able to refresh token
   - get authorize URL `client.authorize_url`
