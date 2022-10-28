@@ -25,7 +25,7 @@ You can pass configuration options as a block to `Office365::REST::Client.new`.
 - refresh_token: optional, only required for refresh_token
 - debug: optional, default false, output the request information
 
-### Fetch data from MS Graph API
+### Used to get data from MS Graph API
 
 ```ruby
 client = Office365::REST::Client.new do |config|
@@ -34,7 +34,7 @@ client = Office365::REST::Client.new do |config|
 end
 ```
 
-### Like to refresh token
+### For refresh token
 
 ```ruby
 client = Office365::REST::Client.new do |config|
@@ -46,7 +46,7 @@ client = Office365::REST::Client.new do |config|
 end
 ```
 
-## Usage Examples
+## Usage
 
 After configuring a `client`, you can do the following things.
 
