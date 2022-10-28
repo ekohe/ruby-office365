@@ -1,4 +1,4 @@
-# Office 365
+# Office 365 (2022)
 
 A simple ruby library to interact with Microsoft Graph and Office 365 API.
 
@@ -18,14 +18,31 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 You can pass configuration options as a block to `Office365::REST::Client.new`.
 
+- tenant_id: optional, only required for refresh_token
+- client_id: optional, only required for refresh_token
+- client_secret: optional, only required for refresh_token
+- access_token: required for fetch mailbox, calendars, contacts data
+- refresh_token: optional, only required for refresh_token
+- debug: optional, default false, output the request information
+
+### Fetch data from MS Graph API
+
 ```ruby
 client = Office365::REST::Client.new do |config|
-  config.tenant_id          = "YOUR_ORG_TENANT_ID"
-  config.client_id          = "YOUR_APP_CLIENT_ID"
-  config.client_secret      = "YOUR_APP_CLIENT_SECRET"
-  config.redirect_uri       = "YOUR_APP_REDIRECT_URL"
-  config.access_token       = "YOUR_ACCESS_TOKEN"
-  config.refresh_token      = "YOUR_REFRESH_TOKEN"
+  config.access_token = "YOUR_ACCESS_TOKEN"
+  config.debug = "true/false" # Optional, default to false, output the information in the request
+end
+```
+
+### Like to refresh token
+
+```ruby
+client = Office365::REST::Client.new do |config|
+  config.tenant_id = "YOUR_ORG_TENANT_ID"
+  config.client_id = "YOUR_APP_CLIENT_ID"
+  config.client_secret = "YOUR_APP_CLIENT_SECRET"
+  config.refresh_token = "YOUR_REFRESH_TOKEN"
+  config.debug = "true/false" # Optional, default to false, output the information in the request
 end
 ```
 
@@ -33,16 +50,16 @@ end
 
 After configuring a `client`, you can do the following things.
 
-**response**
+**Response structure**
 
-    - `results`: wrap all data into results
-    - `next_link`: get the new link for the next page of data
+    - results: wrap all data into results
+    - next_link: get the new link for the next page of data
 
-**to JSON**
+**A simple way to convert an office365 object to JSON**
 
-    - `as_json`: convert office365 object to JSON format
+    - as_json: convert office365 object to JSON format
 
-**Get Profile (as the authenticated user)**
+**Get my profile by access token**
 
 ```ruby
 irb(main):004:0> response = client.me
@@ -65,7 +82,7 @@ irb(main):004:0> response.as_json
 }
 ```
 
-**Get my calendars**
+**Get my calendars by access token**
 
 ```ruby
 irb(main):005:0> client.calendars
@@ -73,7 +90,7 @@ irb(main):005:0> client.calendars[:results]
 irb(main):005:0> client.calendars[:next_link]
 ```
 
-**Get my mails**
+**Get my mails by access token**
 
 ```ruby
 irb(main):005:0> client.messages
@@ -82,7 +99,7 @@ irb(main):005:0> client.messages({ filter: "createdDateTime lt 2022-01-01" })
 irb(main):005:0> client.messages({ filter: "createdDateTime lt 2022-01-01", next_link: 'https://....' })
 ```
 
-**Get my contacts**
+**Get my contacts by access token**
 
 ```ruby
 irb(main):018:0> response = client.contacts
@@ -132,7 +149,7 @@ irb(main):018:0> response[:results][0].as_json
 }
 ```
 
-**Refresh User Token**
+**Refresh access token by refresh token**
 
 ```ruby
 irb(main):005:0> response = client.refresh_token!
@@ -143,6 +160,12 @@ irb(main):005:0> response.access_token
 irb(main):005:0> response.refresh_token
 => "0.ARgA7EiQdLv1qECnFqPfrznKsT9ERYaGfG9Ki5WzQtEllj8YAJk.AgABAAEAAAD--DLA3VO7QrddgJg7WevrAgDs_wQA9P-Q1ODlBsrdZi-5s2mfLtEsavBgiEhGcz1KEf26fMrGFU3LM_og5l6wjSAtQ83XHLuje0_KYGol26_LGV_uH0F1MwCFR1N3ctwg4_...."
 ```
+
+## Development
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `bundle exec rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Copyright
 
