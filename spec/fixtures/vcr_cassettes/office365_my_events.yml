@@ -30,55 +30,21 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       Request-Id:
-      - 3428b311-57e3-4b9f-a4c5-1a431863b5ba
+      - b05374be-399b-4471-8a7c-5f019f91d955
       Client-Request-Id:
-      - 3428b311-57e3-4b9f-a4c5-1a431863b5ba
+      - b05374be-399b-4471-8a7c-5f019f91d955
       X-Ms-Ags-Diagnostic:
-      - '{"ServerInfo":{"DataCenter":"Korea Central","Slice":"E","Ring":"3","ScaleUnit":"000","RoleInstance":"SE1PEPF00001881"}}'
+      - '{"ServerInfo":{"DataCenter":"Korea Central","Slice":"E","Ring":"3","ScaleUnit":"001","RoleInstance":"SE1PEPF0000340B"}}'
       Date:
-      - Tue, 01 Nov 2022 15:43:09 GMT
+      - Tue, 01 Nov 2022 11:36:40 GMT
     body:
       encoding: ASCII-8BIT
-      string: '{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users(''6de11dbd-7bf6-44e9-9c95-80de80a07ce1'')/events","value":[{"@odata.etag":"W/\"Ac4KMsV340S4R0LwqVXF0QAACBJVhg==\"","id":"AAMkADdhZmFlNzVmLWNiNzQtNDRhMi1hNjBkLWU3ZjI4ZTUzM2FjMwBGAAAAAADptOSlOMmUQJ1QlogHncQ9BwABzgoyxXfjRLhHQvCpVcXRAAAAAAENAAABzgoyxXfjRLhHQvCpVcXRAAAIFhVwAAA=","createdDateTime":"2022-10-31T10:34:12.4816172Z","lastModifiedDateTime":"2022-10-31T10:36:21.7871694Z","changeKey":"Ac4KMsV340S4R0LwqVXF0QAACBJVhg==","categories":[],"transactionId":"977c4882-d7f5-69ee-3f08-c808d7b8cc08","originalStartTimeZone":"China
-        Standard Time","originalEndTimeZone":"China Standard Time","iCalUId":"040000008200E00074C5B7101A82E0080000000071C9345114EDD80100000000000000001000000007E39BE5F360BD43BBB8789034D0CED5","reminderMinutesBeforeStart":15,"isReminderOn":true,"hasAttachments":false,"subject":"test","bodyPreview":"test\r\n\r\n________________________________________________________________________________\r\nMicrosoft
-        Teams meeting\r\nJoin on your computer, mobile app or room device\r\nClick
-        here to join the meeting\r\nMeeting ID: 218 334 166 091\r\nPasscode: 2V79KG\r\nDownload
-        Te","importance":"normal","sensitivity":"normal","isAllDay":false,"isCancelled":false,"isOrganizer":true,"responseRequested":true,"seriesMasterId":null,"showAs":"busy","type":"singleInstance","webLink":"https://outlook.office365.com/owa/?itemid=AAMkADdhZmFlNzVmLWNiNzQtNDRhMi1hNjBkLWU3ZjI4ZTUzM2FjMwBGAAAAAADptOSlOMmUQJ1QlogHncQ9BwABzgoyxXfjRLhHQvCpVcXRAAAAAAENAAABzgoyxXfjRLhHQvCpVcXRAAAIFhVwAAA%3D&exvsurl=1&path=/calendar/item","onlineMeetingUrl":null,"isOnlineMeeting":true,"onlineMeetingProvider":"teamsForBusiness","allowNewTimeProposals":true,"occurrenceId":null,"isDraft":false,"hideAttendees":false,"responseStatus":{"response":"organizer","time":"0001-01-01T00:00:00Z"},"body":{"contentType":"html","content":"<html>\r\n<head>\r\n<meta
+      string: '{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users(''feoso946%40hotmail.com'')/events","value":[{"@odata.etag":"W/\"nq/mXjFbGU+cgYJVrV4EWQAElt3IQg==\"","id":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgENAAAAnq-mXjFbGU_cgYJVrV4EWQAElt7osQAAAA==","createdDateTime":"2022-09-27T07:54:36.2960098Z","lastModifiedDateTime":"2022-09-27T07:56:37.5228787Z","changeKey":"nq/mXjFbGU+cgYJVrV4EWQAElt3IQg==","categories":[],"transactionId":"93ac6968-751a-58b1-a7f3-ae040425e8a1","originalStartTimeZone":"China
+        Standard Time","originalEndTimeZone":"China Standard Time","iCalUId":"040000008200E00074C5B7101A82E00800000000E2F04C6346D2D8010000000000000000100000007977B8666EB51A4C8136C459842E2560","reminderMinutesBeforeStart":15,"isReminderOn":true,"hasAttachments":false,"subject":"Go
+        home","bodyPreview":"Go home ...","importance":"normal","sensitivity":"normal","isAllDay":false,"isCancelled":false,"isOrganizer":true,"responseRequested":true,"seriesMasterId":null,"showAs":"busy","type":"singleInstance","webLink":"https://outlook.live.com/owa/?itemid=AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa%2FZlEeOoweJ8LgGnAcAnq%2FmXjFbGU%2BcgYJVrV4EWQAAAgENAAAAnq%2FmXjFbGU%2BcgYJVrV4EWQAElt7osQAAAA%3D%3D&exvsurl=1&path=/calendar/item","onlineMeetingUrl":null,"isOnlineMeeting":false,"onlineMeetingProvider":"unknown","allowNewTimeProposals":true,"occurrenceId":null,"isDraft":false,"hideAttendees":false,"responseStatus":{"response":"organizer","time":"0001-01-01T00:00:00Z"},"body":{"contentType":"html","content":"<html>\r\n<head>\r\n<meta
         http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n</head>\r\n<body>\r\n<div
-        style=\"font-family:Calibri,Arial,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0);
-        background-color:rgb(255,255,255)\">\r\ntest</div>\r\n<br>\r\n<div style=\"width:100%;
-        height:20px\"><span style=\"white-space:nowrap; color:#5F5F5F; opacity:.36\">________________________________________________________________________________</span>\r\n</div>\r\n<div
-        class=\"me-email-text\" lang=\"en-US\" style=\"color:#252424; font-family:''Segoe
-        UI'',''Helvetica Neue'',Helvetica,Arial,sans-serif\">\r\n<div style=\"margin-top:24px;
-        margin-bottom:20px\"><span style=\"font-size:24px; color:#252424\">Microsoft
-        Teams meeting</span>\r\n</div>\r\n<div style=\"margin-bottom:20px\">\r\n<div
-        style=\"margin-top:0px; margin-bottom:0px; font-weight:bold\"><span style=\"font-size:14px;
-        color:#252424\">Join on your computer, mobile app or room device</span>\r\n</div>\r\n<a
-        href=\"https://teams.microsoft.com/l/meetup-join/19%3ameeting_YTE2MjY2YmItNWYyMC00MmY5LWFmZDEtZmU3NjM5YWU2MDE0%40thread.v2/0?context=%7b%22Tid%22%3a%22749048ec-f5bb-40a8-a716-a3dfaf39cab1%22%2c%22Oid%22%3a%226de11dbd-7bf6-44e9-9c95-80de80a07ce1%22%7d\"
-        class=\"me-email-headline\" style=\"font-size:14px; font-family:''Segoe UI
-        Semibold'',''Segoe UI'',''Helvetica Neue'',Helvetica,Arial,sans-serif; text-decoration:underline;
-        color:#6264a7\">Click\r\n here to join the meeting</a> </div>\r\n<div style=\"margin-bottom:20px;
-        margin-top:20px\">\r\n<div style=\"margin-bottom:4px\"><span style=\"font-size:14px;
-        color:#252424\">Meeting ID:\r\n<span style=\"font-size:16px; color:#252424\">218
-        334 166 091</span> </span><br>\r\n<span style=\"font-size:14px; color:#252424\">Passcode:
-        </span><span style=\"font-size:16px; color:#252424\">2V79KG\r\n</span>\r\n<div
-        style=\"font-size:14px\"><a href=\"https://www.microsoft.com/en-us/microsoft-teams/download-app\"
-        class=\"me-email-link\" style=\"font-size:14px; text-decoration:underline;
-        color:#6264a7; font-family:''Segoe UI'',''Helvetica Neue'',Helvetica,Arial,sans-serif\">Download\r\n
-        Teams</a> | <a href=\"https://www.microsoft.com/microsoft-teams/join-a-meeting\"
-        class=\"me-email-link\" style=\"font-size:14px; text-decoration:underline;
-        color:#6264a7; font-family:''Segoe UI'',''Helvetica Neue'',Helvetica,Arial,sans-serif\">\r\nJoin
-        on the web</a></div>\r\n</div>\r\n</div>\r\n<div style=\"margin-bottom:24px;
-        margin-top:20px\"><a href=\"https://aka.ms/JoinTeamsMeeting\" class=\"me-email-link\"
-        style=\"font-size:14px; text-decoration:underline; color:#6264a7; font-family:''Segoe
-        UI'',''Helvetica Neue'',Helvetica,Arial,sans-serif\">Learn More</a>\r\n |
-        <a href=\"https://teams.microsoft.com/meetingOptions/?organizerId=6de11dbd-7bf6-44e9-9c95-80de80a07ce1&amp;tenantId=749048ec-f5bb-40a8-a716-a3dfaf39cab1&amp;threadId=19_meeting_YTE2MjY2YmItNWYyMC00MmY5LWFmZDEtZmU3NjM5YWU2MDE0@thread.v2&amp;messageId=0&amp;language=en-US\"
-        class=\"me-email-link\" style=\"font-size:14px; text-decoration:underline;
-        color:#6264a7; font-family:''Segoe UI'',''Helvetica Neue'',Helvetica,Arial,sans-serif\">\r\nMeeting
-        options</a> </div>\r\n</div>\r\n<div style=\"font-size:14px; margin-bottom:4px;
-        font-family:''Segoe UI'',''Helvetica Neue'',Helvetica,Arial,sans-serif\">\r\n</div>\r\n<div
-        style=\"font-size:12px\"></div>\r\n<div></div>\r\n<div style=\"width:100%;
-        height:20px\"><span style=\"white-space:nowrap; color:#5F5F5F; opacity:.36\">________________________________________________________________________________</span>\r\n</div>\r\n</body>\r\n</html>\r\n"},"start":{"dateTime":"2022-10-06T00:00:00.0000000","timeZone":"UTC"},"end":{"dateTime":"2022-10-06T00:30:00.0000000","timeZone":"UTC"},"location":{"displayName":"","locationType":"default","uniqueIdType":"unknown","address":{},"coordinates":{}},"locations":[],"recurrence":null,"attendees":[{"type":"required","status":{"response":"none","time":"0001-01-01T00:00:00Z"},"emailAddress":{"name":"dale","address":"dale@ekohe.com"}}],"organizer":{"emailAddress":{"name":"Ekohe
-        Sonar","address":"ekohe@stripes.co"}},"onlineMeeting":{"joinUrl":"https://teams.microsoft.com/l/meetup-join/19%3ameeting_YTE2MjY2YmItNWYyMC00MmY5LWFmZDEtZmU3NjM5YWU2MDE0%40thread.v2/0?context=%7b%22Tid%22%3a%22749048ec-f5bb-40a8-a716-a3dfaf39cab1%22%2c%22Oid%22%3a%226de11dbd-7bf6-44e9-9c95-80de80a07ce1%22%7d"},"calendar@odata.associationLink":"https://graph.microsoft.com/v1.0/users(''6de11dbd-7bf6-44e9-9c95-80de80a07ce1'')/calendars(''AAMkADdhZmFlNzVmLWNiNzQtNDRhMi1hNjBkLWU3ZjI4ZTUzM2FjMwBGAAAAAADptOSlOMmUQJ1QlogHncQ9BwABzgoyxXfjRLhHQvCpVcXRAAAAAAEGAAABzgoyxXfjRLhHQvCpVcXRAAAEnSvkAAA='')/$ref","calendar@odata.navigationLink":"https://graph.microsoft.com/v1.0/users(''6de11dbd-7bf6-44e9-9c95-80de80a07ce1'')/calendars(''AAMkADdhZmFlNzVmLWNiNzQtNDRhMi1hNjBkLWU3ZjI4ZTUzM2FjMwBGAAAAAADptOSlOMmUQJ1QlogHncQ9BwABzgoyxXfjRLhHQvCpVcXRAAAAAAEGAAABzgoyxXfjRLhHQvCpVcXRAAAEnSvkAAA='')"}]}'
-  recorded_at: Tue, 01 Nov 2022 15:43:09 GMT
+        class=\"elementToProof\" style=\"font-family:Calibri,Arial,Helvetica,sans-serif;
+        font-size:12pt; color:rgb(0,0,0)\">\r\nGo home ...</div>\r\n</body>\r\n</html>\r\n"},"start":{"dateTime":"2022-09-30T00:00:00.0000000","timeZone":"UTC"},"end":{"dateTime":"2022-10-07T00:30:00.0000000","timeZone":"UTC"},"location":{"displayName":"","locationType":"default","uniqueIdType":"unknown","address":{},"coordinates":{}},"locations":[],"recurrence":null,"attendees":[],"organizer":{"emailAddress":{"name":"\u5f20
+        \u626c","address":"feoso946@hotmail.com"}},"onlineMeeting":null,"calendar@odata.associationLink":"https://graph.microsoft.com/v1.0/users(''feoso946@hotmail.com'')/calendars(''AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgEGAAAAnq-mXjFbGU_cgYJVrV4EWQAElt7g4AAAAAA='')/$ref","calendar@odata.navigationLink":"https://graph.microsoft.com/v1.0/users(''feoso946@hotmail.com'')/calendars(''AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgEGAAAAnq-mXjFbGU_cgYJVrV4EWQAElt7g4AAAAAA='')"}]}'
+  recorded_at: Tue, 01 Nov 2022 11:36:41 GMT
 recorded_with: VCR 6.1.0
