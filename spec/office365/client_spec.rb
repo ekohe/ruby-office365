@@ -86,4 +86,10 @@ RSpec.describe Office365::Client do
   xit "be able to refresh token by refresh_token" do
     expect(client.refresh_token!).to eq({})
   end
+
+  it "returns my events" do
+    response = VCR.use_cassette("office365_my_events") { client.events }
+
+    expect(response[:results].size).to eq(1)
+  end
 end

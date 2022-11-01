@@ -11,5 +11,6 @@ module Office365
     autoload :EmailAddress,       "office365/models/email_address"
     autoload :Contact,            "office365/models/contact"
     autoload :AccessToken,        "office365/models/access_token"
+    autoload :Event,              "office365/models/event"
   end
 end

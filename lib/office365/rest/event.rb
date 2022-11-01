@@ -13,7 +13,7 @@ module Office365
         response = message_response(args: args.merge(base_uri: "/me/events"))
 
         {
-          results: response["value"].map { |v| Models::Calendar.new(v) },
+          results: response["value"].map { |v| Models::Event.new(v) },
           next_link: response["@odata.nextLink"]
         }
       end

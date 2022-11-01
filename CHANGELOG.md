@@ -15,12 +15,12 @@
 
 - Integrate REST API to get mailbox with pagination
   - get mailbox data with next link `client.messages({next_link: 'xxx'})`
-  - get mailbox data with next link `client.calenders({next_link: 'xxx'})`
+  - get calenders data with next link `client.calenders({next_link: 'xxx'})`
 
 ## [0.1.3] - (2022-10-26)
 
 - Integrate REST API to get contacts
-  - get profile `client.contacts`
+  - get contacts `client.contacts`
   - get contacts data with next link `client.contacts({next_link: 'xxx'})`
 
 ## [0.1.5] - (2022-10-27)
@@ -33,5 +33,5 @@
 ## [0.1.6] - (2022-11-01)
 
 - Integrate REST API to get events
-  - get events URL `client.events`
+  - get events `client.events`
   - get events data with next link `client.events({next_link: 'xxx'})`

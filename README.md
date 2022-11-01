@@ -90,7 +90,7 @@ irb(main):005:0> client.calendars[:results]
 irb(main):005:0> client.calendars[:next_link]
 ```
 
-**Get my events in calendar by access token**
+**Get my events by access token**
 
 ```ruby
 irb(main):005:0> client.events
