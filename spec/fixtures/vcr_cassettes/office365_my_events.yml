@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.microsoft.com/v1.0/me/events
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true; IEEE754Compatible=false;
+        charset=utf-8
+      Strict-Transport-Security:
+      - max-age=31536000
+      Request-Id:
+      - b05374be-399b-4471-8a7c-5f019f91d955
+      Client-Request-Id:
+      - b05374be-399b-4471-8a7c-5f019f91d955
+      X-Ms-Ags-Diagnostic:
+      - '{"ServerInfo":{"DataCenter":"Korea Central","Slice":"E","Ring":"3","ScaleUnit":"001","RoleInstance":"SE1PEPF0000340B"}}'
+      Date:
+      - Tue, 01 Nov 2022 11:36:40 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users(''feoso946%40hotmail.com'')/events","value":[{"@odata.etag":"W/\"nq/mXjFbGU+cgYJVrV4EWQAElt3IQg==\"","id":"AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgENAAAAnq-mXjFbGU_cgYJVrV4EWQAElt7osQAAAA==","createdDateTime":"2022-09-27T07:54:36.2960098Z","lastModifiedDateTime":"2022-09-27T07:56:37.5228787Z","changeKey":"nq/mXjFbGU+cgYJVrV4EWQAElt3IQg==","categories":[],"transactionId":"93ac6968-751a-58b1-a7f3-ae040425e8a1","originalStartTimeZone":"China
+        Standard Time","originalEndTimeZone":"China Standard Time","iCalUId":"040000008200E00074C5B7101A82E00800000000E2F04C6346D2D8010000000000000000100000007977B8666EB51A4C8136C459842E2560","reminderMinutesBeforeStart":15,"isReminderOn":true,"hasAttachments":false,"subject":"Go
+        home","bodyPreview":"Go home ...","importance":"normal","sensitivity":"normal","isAllDay":false,"isCancelled":false,"isOrganizer":true,"responseRequested":true,"seriesMasterId":null,"showAs":"busy","type":"singleInstance","webLink":"https://outlook.live.com/owa/?itemid=AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa%2FZlEeOoweJ8LgGnAcAnq%2FmXjFbGU%2BcgYJVrV4EWQAAAgENAAAAnq%2FmXjFbGU%2BcgYJVrV4EWQAElt7osQAAAA%3D%3D&exvsurl=1&path=/calendar/item","onlineMeetingUrl":null,"isOnlineMeeting":false,"onlineMeetingProvider":"unknown","allowNewTimeProposals":true,"occurrenceId":null,"isDraft":false,"hideAttendees":false,"responseStatus":{"response":"organizer","time":"0001-01-01T00:00:00Z"},"body":{"contentType":"html","content":"<html>\r\n<head>\r\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n</head>\r\n<body>\r\n<div
+        class=\"elementToProof\" style=\"font-family:Calibri,Arial,Helvetica,sans-serif;
+        font-size:12pt; color:rgb(0,0,0)\">\r\nGo home ...</div>\r\n</body>\r\n</html>\r\n"},"start":{"dateTime":"2022-09-30T00:00:00.0000000","timeZone":"UTC"},"end":{"dateTime":"2022-10-07T00:30:00.0000000","timeZone":"UTC"},"location":{"displayName":"","locationType":"default","uniqueIdType":"unknown","address":{},"coordinates":{}},"locations":[],"recurrence":null,"attendees":[],"organizer":{"emailAddress":{"name":"\u5f20
+        \u626c","address":"feoso946@hotmail.com"}},"onlineMeeting":null,"calendar@odata.associationLink":"https://graph.microsoft.com/v1.0/users(''feoso946@hotmail.com'')/calendars(''AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgEGAAAAnq-mXjFbGU_cgYJVrV4EWQAElt7g4AAAAAA='')/$ref","calendar@odata.navigationLink":"https://graph.microsoft.com/v1.0/users(''feoso946@hotmail.com'')/calendars(''AQMkADAwATNiZmYAZC1hZmUzLTIwYmUtMDACLTAwCgBGAAAD6hLLGa-ZlEeOoweJ8LgGnAcAnq-mXjFbGU_cgYJVrV4EWQAAAgEGAAAAnq-mXjFbGU_cgYJVrV4EWQAElt7g4AAAAAA='')"}]}'
+  recorded_at: Tue, 01 Nov 2022 11:36:41 GMT
+recorded_with: VCR 6.1.0

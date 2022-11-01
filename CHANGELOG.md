@@ -29,3 +29,9 @@
   - get authorize URL `client.authorize_url`
   - get token URL `client.token_url`
   - be able to refresh token `client.refresh_token!`
+
+## [0.1.6] - (2022-11-01)
+
+- Integrate REST API to get events
+  - get events URL `client.events`
+  - get events data with next link `client.events({next_link: 'xxx'})`
