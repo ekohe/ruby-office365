@@ -90,6 +90,14 @@ irb(main):005:0> client.calendars[:results]
 irb(main):005:0> client.calendars[:next_link]
 ```
 
+**Get my events by access token**
+
+```ruby
+irb(main):005:0> client.events
+irb(main):005:0> client.events[:results]
+irb(main):005:0> client.events[:next_link]
+```
+
 **Get my mails by access token**
 
 ```ruby
