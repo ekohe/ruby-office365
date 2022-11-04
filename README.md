@@ -1,8 +1,5 @@
-# Office 365 (2022)
-
-A simple ruby library to interact with Microsoft Graph and Office 365 API.
-
-- https://developer.microsoft.com/en-us/graph/graph-explorer
+# Office 365 (2022) <img src="https://i.ibb.co/g3mpswn/microsoft-office-365-logo-2016-100727915-large.webp" align="right" width="250" height="150">
+A simple ruby library to interact with Microsoft Graph **[Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)** and Office 365 API
 
 ## Installation
 
@@ -13,6 +10,11 @@ Install the gem and add to the application's Gemfile by executing:
 If bundler is not being used to manage dependencies, install the gem by executing:
 
     $ gem install ruby-office365
+
+## Features
+
+- Supports user's mailboxes, calendars, contacts, events
+- Supports refresh token
 
 ## Configuration
 
