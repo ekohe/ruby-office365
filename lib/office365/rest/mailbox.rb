@@ -10,12 +10,7 @@ module Office365
       # params: args => { next_link: (nil / next_page_url) }
       # response { results: [], next_link: '...' }
       def messages(args = {})
-        response = message_response(args: args.merge(base_uri: "/me/messages"))
-
-        {
-          results: response["value"].map { |v| Models::Mailbox.new(v) },
-          next_link: response["@odata.nextLink"]
-        }
+        wrap_results(args.merge(kclass: Models::Mailbox, base_uri: "/me/messages"))
       end
     end
   end
