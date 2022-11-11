@@ -40,7 +40,13 @@ module Office365
           next_link = args.delete(:next_link)
           return next_link unless next_link.nil?
 
-          base_uri = args.delete(:base_uri)
+          # organize params
+          base_uri        = args.delete(:base_uri)
+          select_fields   = args.delete(:select)
+          order_by        = args.delete(:order)
+          args[:select]   = select_fields.map(&:rails_camelize).join(",") if select_fields.is_a?(Array)
+          args[:orderby]  = order_by if order_by
+
           request_uri = ["/", Office365::API_VERSION, base_uri].join
           request_uri += ["?", args.to_query].join if args.any?
           request_uri

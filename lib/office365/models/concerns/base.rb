@@ -6,7 +6,7 @@ module Office365
   module Models
     class Base < OpenStruct
       def initialize(response = {})
-        super(response.transform_keys(&:o_underscore))
+        super(response.transform_keys(&:rails_underscore))
       end
 
       def as_json

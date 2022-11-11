@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://graph.microsoft.com/v1.0/me/messages?filter=createdDateTime%20lt%202022-01-01
+    uri: https://graph.microsoft.com/v1.0/me/messages?$filter=createdDateTime%20lt%202022-01-01
     body:
       encoding: US-ASCII
       string: ''
