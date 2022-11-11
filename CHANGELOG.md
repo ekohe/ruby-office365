@@ -35,3 +35,9 @@
 - Integrate REST API to get events
   - get events `client.events`
   - get events data with next link `client.events({next_link: 'xxx'})`
+
+## [0.1.7] - (2022-11-11)
+
+- Improve performance: supports select and sort in REST APIs
+  - get messages by select fields `client.messages({ select: %[id] })`
+  - get messages by custom order `client.messages({ order: 'id asc' })`
