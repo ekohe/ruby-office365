@@ -45,8 +45,14 @@ module Office365
         resp_body = response.body
 
         return resp_body if response.status == 200
-        raise InvalidAuthenticationTokenError, resp_body.dig("error", "message") if response.status == 401
+
         raise InvaliRequestError, resp_body["error_description"] if response.status == 400
+        raise InvalidAuthenticationTokenError, resp_body.dig("error", "message") if response.status == 401
+        raise AccessDeniedError, resp_body.dig("error", "message") if response.status == 403
+        raise NotFoundError, resp_body.dig("error", "message") if response.status == 404
+        raise ThrottlingError, resp_body.dig("error", "message") if response.status == 429
+
+        raise ServiceUnavailableError, resp_body.dig("error", "message") if response.status == 503
 
         raise Error, resp_body["error"]
       end

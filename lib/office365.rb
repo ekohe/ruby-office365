@@ -12,6 +12,12 @@ module Office365
   class InvalidAuthenticationTokenError < StandardError; end
   class InvaliRequestError < StandardError; end
 
+  # Handling expected errors -> https://learn.microsoft.com/en-us/graph/best-practices-concept#handling-expected-errors
+  class AccessDeniedError < StandardError; end
+  class NotFoundError < StandardError; end
+  class ThrottlingError < StandardError; end
+  class ServiceUnavailableError < StandardError; end
+
   API_HOST      = "https://graph.microsoft.com"
   API_VERSION   = "v1.0"
 
