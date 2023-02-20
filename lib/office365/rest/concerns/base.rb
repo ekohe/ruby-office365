@@ -48,7 +48,7 @@ module Office365
           args[:orderby]  = order_by if order_by
 
           request_uri = ["/", Office365::API_VERSION, base_uri].join
-          request_uri += ["?", args.to_query].join if args.any?
+          request_uri += ["?", args.ms_hash_to_query].join if args.any?
           request_uri
         end
       end

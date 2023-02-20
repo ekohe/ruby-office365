@@ -13,7 +13,7 @@ module Office365
           response_mode: "query",
           redirect_uri: redirect_uri,
           state: SecureRandom.hex
-        }.to_query
+        }.ms_hash_to_query
 
         [base_uri, "?", azure_params].join
       end

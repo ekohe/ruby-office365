@@ -34,7 +34,7 @@ module Office365
           faraday.adapter Faraday.default_adapter
           faraday.response :json
           faraday.response :logger, ::Logger.new($stdout), bodies: true if dev_developement?
-        end.post(req_url.request_uri, args.to_query)
+        end.post(req_url.request_uri, args.ms_hash_to_query)
 
         parse_respond(response)
       end
