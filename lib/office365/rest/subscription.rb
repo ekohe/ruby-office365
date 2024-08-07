@@ -4,6 +4,12 @@ module Office365
   module REST
     module Subscription
       def create_subscription(args = {})
+        raise ArgumentError, "Missing changeType" if args[:changeType].nil?
+        raise ArgumentError, "Missing notificationUrl" if args[:notificationUrl].nil?
+        raise ArgumentError, "Missing resource" if args[:resource].nil?
+        raise ArgumentError, "Missing expirationDateTime" if args[:expirationDateTime].nil?
+        raise ArgumentError, "Missing clientState" if args[:clientState].nil?
+
         Models::Subscription.new(
           Request.new(access_token, debug: debug).post("/v1.0/subscriptions", { json_header: true }.merge(args))
         )
