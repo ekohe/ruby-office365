@@ -83,6 +83,45 @@ RSpec.describe Office365::Client do
     expect(client.token_url).to eq("https://login.microsoftonline.com/12345/oauth2/v2.0/token")
   end
 
+  it "returns event by id" do
+    response = VCR.use_cassette("office365_event_by_id") { client.event("identifier") }
+
+    expect(response[:results].size).to eq(1)
+  end
+
+  it "creates subscription" do
+    args = {
+      changeType: "updated,deleted",
+      notificationUrl: "https://hello-world.com/office365/notifications",
+      lifecycleNotificationUrl: "https://hello-world.com/office365/lifecycle_notifications",
+      resource: "/me/events",
+      expirationDateTime: "2024-08-07T12:00:00.0000000Z",
+      clientState: "SecretClientState"
+    }
+
+    response = VCR.use_cassette("office365_create_subscription") { client.create_subscription(args) }
+
+    expect(response.class).to eq(Office365::Models::Subscription)
+    expect(response.resource).to eq(args[:resource])
+    expect(response.change_type).to eq(args[:changeType])
+    expect(response.id).to eq("subscription-identifier")
+  end
+
+  it "renew subscription" do
+    args = {
+      identifier: "subscription-identifier",
+      expirationDateTime: "2024-08-08T12:00:00.0000000Z"
+    }
+
+    response = VCR.use_cassette("office365_renew_subscription") { client.renew_subscription(args) }
+
+    expect(response.class).to eq(Office365::Models::Subscription)
+    expect(response.resource).to eq("/me/events")
+    expect(response.change_type).to eq("updated,deleted")
+    expect(response.expiration_date_time).to eq("2024-08-08T12:00:00Z")
+    expect(response.id).to eq("subscription-identifier")
+  end
+
   xit "be able to refresh token by refresh_token" do
     expect(client.refresh_token!).to eq({})
   end

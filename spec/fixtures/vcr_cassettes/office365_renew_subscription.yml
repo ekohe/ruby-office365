@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://graph.microsoft.com/v1.0/subscriptions/subscription-identifier
+    body:
+      encoding: UTF-8
+      string: '{"expirationDateTime":"2024-08-08T12:00:00.0000000Z"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=31536000
+      Request-Id:
+      - 00ff5106-5be8-44a6-8771-234579aaa157
+      Client-Request-Id:
+      - 00ff5106-5be8-44a6-8771-234579aaa157
+      X-Ms-Ags-Diagnostic:
+      - '{"ServerInfo":{"DataCenter":"Japan East","Slice":"E","Ring":"5","ScaleUnit":"000","RoleInstance":"TY1PEPF00006060"}}'
+      Odata-Version:
+      - '4.0'
+      Date:
+      - Wed, 07 Aug 2024 07:55:49 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#subscriptions/$entity","id":"subscription-identifier","resource":"/me/events","applicationId":"hello-world-app","changeType":"updated,deleted","clientState":"SecretClientState","notificationUrl":"https://sonar.inbound.staging.ekohe.com/office365/notifications","notificationQueryOptions":null,"lifecycleNotificationUrl":"https://sonar.inbound.staging.ekohe.com/office365/lifecycle_notifications","expirationDateTime":"2024-08-08T12:00:00Z","creatorId":"6de11dbd-7bf6-44e9-9c95-80de80a07ce1","includeResourceData":null,"latestSupportedTlsVersion":"v1_2","encryptionCertificate":null,"encryptionCertificateId":null,"notificationUrlAppId":null}'
+  recorded_at: Wed, 07 Aug 2024 07:55:50 GMT
+recorded_with: VCR 6.1.0
