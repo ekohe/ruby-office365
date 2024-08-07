@@ -100,6 +100,15 @@ irb(main):005:0> client.events[:results]
 irb(main):005:0> client.events[:next_link]
 ```
 
+**Get my event by id**
+
+```ruby
+irb(main):005:0> client.event('identifier')
+irb(main):005:0> client.event('identifier')[:results]
+```
+
+Results will return an array even if it is a single result.  
+
 **Get my mails by access token**
 
 ```ruby
@@ -170,6 +179,37 @@ irb(main):005:0> response.access_token
 irb(main):005:0> response.refresh_token
 => "0.ARgA7EiQdLv1qECnFqPfrznKsT9ERYaGfG9Ki5WzQtEllj8YAJk.AgABAAEAAAD--DLA3VO7QrddgJg7WevrAgDs_wQA9P-Q1ODlBsrdZi-5s2mfLtEsavBgiEhGcz1KEf26fMrGFU3LM_og5l6wjSAtQ83XHLuje0_KYGol26_LGV_uH0F1MwCFR1N3ctwg4_...."
 ```
+
+**Create Subscription: it will create a webhook for Office365**
+
+```ruby
+args = {
+  changeType: "updated,deleted",
+  notificationUrl: "https://hello-world.com/office365/notifications",
+  lifecycleNotificationUrl: "https://hello-world.com/office365/lifecycle_notifications",
+  resource: "/me/{type}",
+  expirationDateTime: "2024-08-07T12:00:00.0000000Z",
+  clientState: "SecretClientState"
+}
+
+irb(main):005:0> subscription = client.create_subscription(args)
+```
+
+will return the subscription object `Office365::Models::Subscription`
+
+**Renew Subscription**
+
+```ruby
+args = {
+  identifier: "subscription-identifier",
+  expirationDateTime: "2024-08-08T12:00:00.0000000Z"
+}
+
+irb(main):005:0> subscription = client.renew_subscription(args)
+```
+
+will return the subscription object `Office365::Models::Subscription`
+
 
 ## Development
 
