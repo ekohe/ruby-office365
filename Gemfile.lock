@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ruby-office365 (0.1.8)
+    ruby-office365 (0.1.9)
       faraday
       faraday_middleware
 
@@ -15,7 +15,7 @@ GEM
     crack (0.4.5)
       rexml
     diff-lcs (1.5.0)
-    faraday (1.10.2)
+    faraday (1.10.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -33,7 +33,7 @@ GEM
     faraday-httpclient (1.0.1)
     faraday-multipart (1.0.4)
       multipart-post (~> 2)
-    faraday-net_http (1.0.1)
+    faraday-net_http (1.0.2)
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
@@ -43,7 +43,7 @@ GEM
     hashdiff (1.0.1)
     json (2.6.2)
     method_source (1.0.0)
-    multipart-post (2.2.3)
+    multipart-post (2.4.1)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
