@@ -28,32 +28,30 @@ module Office365
       end
 
       def post(uri, args)
-        req_url = URI(uri.start_with?("https") ? uri : (Office365::API_HOST + uri))
-        json_header = args.delete(:json_header)
-
-        response = Faraday.new(url: [req_url.scheme, "://", req_url.hostname].join, headers: json_header ? headers : post_headers) do |faraday|
-          faraday.adapter Faraday.default_adapter
-          faraday.response :json
-          faraday.response :logger, ::Logger.new($stdout), bodies: true if dev_developement?
-        end.post(req_url.request_uri, json_header ? args.to_json : args.ms_hash_to_query)
-
+        response = faraday_action(__method__, uri, args)
         parse_respond(response)
       end
 
       def patch(uri, args)
-        req_url = URI(uri.start_with?("https") ? uri : (Office365::API_HOST + uri))
-        json_header = args.delete(:json_header)
-
-        response = Faraday.new(url: [req_url.scheme, "://", req_url.hostname].join, headers: json_header ? headers : post_headers) do |faraday|
-          faraday.adapter Faraday.default_adapter
-          faraday.response :json
-          faraday.response :logger, ::Logger.new($stdout), bodies: true if dev_developement?
-        end.patch(req_url.request_uri, json_header ? args.to_json : args.ms_hash_to_query)
+        response = faraday_action(__method__, uri, args)
 
         parse_respond(response)
       end
 
       private
+
+      def faraday_action(method_name, uri, args)
+        req_url = URI(uri.start_with?("https") ? uri : (Office365::API_HOST + uri))
+        json_header = args.delete(:json_header)
+
+        faraday = Faraday.new(url: [req_url.scheme, "://", req_url.hostname].join, headers: json_header ? headers : post_headers) do |f|
+          f.adapter Faraday.default_adapter
+          f.response :json
+          f.response :logger, ::Logger.new($stdout), bodies: true if dev_developement?
+        end
+
+        faraday.send(method_name, req_url.request_uri, json_header ? args.to_json : args.ms_hash_to_query)
+      end
 
       def parse_respond(response)
         resp_body = response.body
