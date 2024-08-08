@@ -6,7 +6,7 @@ module Office365
   module REST
     module Event
       include Concerns::Base
-      BASE_URI = "/me/events".freeze
+      BASE_URI = "/me/events"
 
       # params: args => { next_link: (nil / next_page_url) }
       # response { results: [], next_link: '...' }
