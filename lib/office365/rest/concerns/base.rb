@@ -13,7 +13,7 @@ module Office365
           response  = get_request(args: args)
 
           # If we are getting a single item by id, return the result as an array
-          return { results: [response].flatten } if get_by_id
+          return { results: [kclass.new(response)].flatten } if get_by_id
 
           {
             results: response["value"].map { |v| kclass.new(v) },
