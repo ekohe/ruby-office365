@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.microsoft.com/v1.0/me/events/identifier
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; odata.metadata=minimal; odata.streaming=true; IEEE754Compatible=false;
+        charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=31536000
+      Request-Id:
+      - de4f3049-6405-460a-a55f-ed4bdea241b8
+      Client-Request-Id:
+      - de4f3049-6405-460a-a55f-ed4bdea241b8
+      X-Ms-Ags-Diagnostic:
+      - '{"ServerInfo":{"DataCenter":"Japan East","Slice":"E","Ring":"5","ScaleUnit":"000","RoleInstance":"TY1PEPF0000824F"}}'
+      Date:
+      - Wed, 07 Aug 2024 07:22:31 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users(''hello-world'')/events/$entity","@odata.etag":"W/\"Ac4KMsV340S4R0LwqVXF0QABrVpntg==\"","id":"identifier","createdDateTime":"2024-08-07T04:11:02.9716249Z","lastModifiedDateTime":"2024-08-07T04:13:22.1273089Z","changeKey":"Ac4KMsV340S4R0LwqVXF0QABrVpntg==","categories":[],"transactionId":"6decf4fd-c54d-c637-046a-988b36495045","originalStartTimeZone":"China
+        Standard Time","originalEndTimeZone":"China Standard Time","iCalUId":"040000008200E00074C5B7101A82E008000000008B353AD17FE8DA0100000000000000001000000097A327F1F55F8545A9AACF1240707768","uid":"040000008200E00074C5B7101A82E008000000008B353AD17FE8DA0100000000000000001000000097A327F1F55F8545A9AACF1240707768","reminderMinutesBeforeStart":15,"isReminderOn":true,"hasAttachments":false,"subject":"event
+        test","bodyPreview":"Test for Webhook\r\n\r\n________________________________________________________________________________\r\nMicrosoft
+        Teams Need help?\r\nJoin the meeting now\r\nMeeting ID: 220 721 647 395\r\nPasscode:
+        xrNBkb\r\n________________________________\r\nFor organizers: Meetin","importance":"normal","sensitivity":"normal","isAllDay":false,"isCancelled":false,"isOrganizer":true,"responseRequested":true,"seriesMasterId":null,"showAs":"busy","type":"singleInstance","webLink":"https://outlook.office365.com/owa/?itemid=identifier%3D&exvsurl=1&path=/calendar/item","onlineMeetingUrl":null,"isOnlineMeeting":true,"onlineMeetingProvider":"teamsForBusiness","allowNewTimeProposals":true,"occurrenceId":null,"isDraft":false,"hideAttendees":false,"responseStatus":{"response":"organizer","time":"0001-01-01T00:00:00Z"},"body":{"contentType":"html","content":"<html>\r\n<head>\r\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n</head>\r\n<body>\r\n<div
+        style=\"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;
+        font-size:12pt; color:rgb(0,0,0)\">\r\nTest for Webhook</div>\r\n<br>\r\n<div
+        style=\"max-width:520px\">\r\n<div style=\"white-space:nowrap; margin-bottom:24px;
+        font-family:&quot;Segoe UI&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;
+        color:rgb(36,36,36)\">\r\n________________________________________________________________________________</div>\r\n<div
+        style=\"margin-bottom:12px; font-family:&quot;Segoe UI&quot;,&quot;Helvetica
+        Neue&quot;,Helvetica,Arial,sans-serif\">\r\n<span style=\"font-size:24px;
+        color:rgb(36,36,36); font-weight:700\">Microsoft Teams</span><span style=\"color:rgb(36,36,36)\">\r\n</span><span
+        style=\"font-size:14px; color:rgb(91,95,199)\"><u><a href=\"https://aka.ms/JoinTeamsMeeting?omkt=en-US\"
+        id=\"x_meet_invite_block.action.help\" class=\"x_me-email-link OWAAutoLink\"
+        style=\"color:rgb(91,95,199)\">Need help?</a></u></span></div>\r\n<div style=\"margin-bottom:6px;
+        font-family:&quot;Segoe UI&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;
+        font-size:20px; color:rgb(91,95,199)\">\r\n<span style=\"font-weight:600\"><u><a
+        href=\"https://teams.microsoft.com/l/meetup-join/19%3ameeting_Hello_world%40thread.v2/0?context=%7b%22Tid%22%3a%22749048ec-f5bb-40a8-a716-a3dfaf39cab1%22%2c%22Oid%22%3a%22hello-world%22%7d\"
+        id=\"x_meet_invite_block.action.join_link\" class=\"x_me-email-headline OWAAutoLink\"
+        title=\"Meeting join link\" style=\"color:rgb(91,95,199)\">Join\r\n the meeting
+        now</a></u></span></div>\r\n<div style=\"margin-bottom:6px; font-family:&quot;Segoe
+        UI&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif\">\r\n<span
+        style=\"font-size:14px; color:rgb(97,97,97)\">Meeting ID: </span><span style=\"font-size:14px;
+        color:rgb(36,36,36)\">220 721 647 395</span><span style=\"color:rgb(36,36,36)\">\r\n</span></div>\r\n<div
+        style=\"margin-bottom:24px; font-family:&quot;Segoe UI&quot;,&quot;Helvetica
+        Neue&quot;,Helvetica,Arial,sans-serif\">\r\n<span style=\"font-size:14px;
+        color:rgb(97,97,97)\">Passcode: </span><span style=\"font-size:14px; color:rgb(36,36,36)\">xrNBkb</span><span
+        style=\"color:rgb(36,36,36)\">\r\n</span></div>\r\n<div style=\"margin-bottom:24px;
+        max-width:532px\">\r\n<hr style=\"background-color:rgb(209,209,209); height:1px\">\r\n</div>\r\n<div
+        style=\"font-family:&quot;Segoe UI&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;
+        font-size:14px\">\r\n<span style=\"color:rgb(97,97,97)\">For organizers: </span><span
+        style=\"color:rgb(91,95,199)\"><u><a href=\"https://teams.microsoft.com/meetingOptions/?organizerId=hello-world&amp;tenantId=749048ec-f5bb-40a8-a716-a3dfaf39cab1&amp;threadId=19_meeting_ZGIxZTcxYjMtMDg0Ni00ZjRiLTg5NTYtOWNjZWRmOWJhOTFk@thread.v2&amp;messageId=0&amp;language=en-US\"
+        id=\"x_meet_invite_block.action.organizer_meet_options\" class=\"x_me-email-link
+        OWAAutoLink\" style=\"color:rgb(91,95,199)\">Meeting\r\n options</a></u></span></div>\r\n<div
+        style=\"margin-top:24px; margin-bottom:6px\"></div>\r\n<div style=\"margin-bottom:24px\"></div>\r\n<div
+        style=\"white-space:nowrap; margin-bottom:24px; font-family:&quot;Segoe UI&quot;,&quot;Helvetica
+        Neue&quot;,Helvetica,Arial,sans-serif; color:rgb(36,36,36)\">\r\n________________________________________________________________________________</div>\r\n</div>\r\n</body>\r\n</html>\r\n"},"start":{"dateTime":"2024-08-28T02:00:00.0000000","timeZone":"UTC"},"end":{"dateTime":"2024-08-28T02:30:00.0000000","timeZone":"UTC"},"location":{"displayName":"Microsoft
+        Teams Meeting","locationType":"default","uniqueId":"Microsoft Teams Meeting","uniqueIdType":"private"},"locations":[{"displayName":"Microsoft
+        Teams Meeting","locationType":"default","uniqueId":"Microsoft Teams Meeting","uniqueIdType":"private"}],"recurrence":null,"attendees":[{"type":"required","status":{"response":"none","time":"0001-01-01T00:00:00Z"},"emailAddress":{"name":"hello2@world.com","address":"hello2@world.com"}}],"organizer":{"emailAddress":{"name":"Hello
+        World","address":"hello@world.com"}},"onlineMeeting":{"joinUrl":"https://teams.microsoft.com/l/meetup-join/19%3ameeting_Hello_world%40thread.v2/0?context=%7b%22Tid%22%3a%22749048ec-f5bb-40a8-a716-a3dfaf39cab1%22%2c%22Oid%22%3a%22hello-world%22%7d"},"calendar@odata.associationLink":"https://graph.microsoft.com/v1.0/users(''hello-world'')/calendars(''hello-calendar'')/$ref","calendar@odata.navigationLink":"https://graph.microsoft.com/v1.0/users(''hello-world'')/calendars(''hello-calendar'')"}'
+  recorded_at: Wed, 07 Aug 2024 07:22:31 GMT
+recorded_with: VCR 6.1.0

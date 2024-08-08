@@ -28,23 +28,35 @@ module Office365
       end
 
       def post(uri, args)
-        req_url = URI(uri.start_with?("https") ? uri : (Office365::API_HOST + uri))
+        response = faraday_action(__method__, uri, args)
+        parse_respond(response)
+      end
 
-        response = Faraday.new(url: [req_url.scheme, "://", req_url.hostname].join, headers: post_headers) do |faraday|
-          faraday.adapter Faraday.default_adapter
-          faraday.response :json
-          faraday.response :logger, ::Logger.new($stdout), bodies: true if dev_developement?
-        end.post(req_url.request_uri, args.ms_hash_to_query)
+      def patch(uri, args)
+        response = faraday_action(__method__, uri, args)
 
         parse_respond(response)
       end
 
       private
 
+      def faraday_action(method_name, uri, args)
+        req_url = URI(uri.start_with?("https") ? uri : (Office365::API_HOST + uri))
+        json_header = args.delete(:json_header)
+
+        faraday = Faraday.new(url: [req_url.scheme, "://", req_url.hostname].join, headers: json_header ? headers : post_headers) do |f|
+          f.adapter Faraday.default_adapter
+          f.response :json
+          f.response :logger, ::Logger.new($stdout), bodies: true if dev_developement?
+        end
+
+        faraday.send(method_name, req_url.request_uri, json_header ? args.to_json : args.ms_hash_to_query)
+      end
+
       def parse_respond(response)
         resp_body = response.body
 
-        return resp_body if response.status == 200
+        return resp_body if [200, 201].include?(response.status)
 
         raise InvaliRequestError, resp_body["error_description"] if response.status == 400
         raise InvalidAuthenticationTokenError, resp_body.dig("error", "message") if response.status == 401

@@ -7,8 +7,13 @@ module Office365
         private
 
         def wrap_results(args)
-          kclass    = args.delete(:kclass)
-          response  = get_request(args: args)
+          kclass     = args.delete(:kclass)
+          identifier = args.delete(:identifier)
+
+          response = get_request(args: args)
+
+          # If we are getting a single item by id, return the result as an array
+          return { results: [kclass.new(response)].flatten } unless identifier.nil?
 
           {
             results: response["value"].map { |v| kclass.new(v) },

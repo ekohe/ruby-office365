@@ -5,6 +5,7 @@ require_relative "./mailbox"
 require_relative "./calendar"
 require_relative "./contact"
 require_relative "./event"
+require_relative "./subscription"
 require_relative "./token"
 
 module Office365
@@ -16,6 +17,7 @@ module Office365
       include Office365::REST::Event
       include Office365::REST::Contact
       include Office365::REST::Token
+      include Office365::REST::Subscription
     end
   end
 end
