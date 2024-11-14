@@ -28,6 +28,14 @@ RSpec.describe Office365::Client do
     expect(response[:results].size).to eq(1)
   end
 
+  it "returns my events for the next week" do
+    response = VCR.use_cassette("office365_my_events_for_the_next_week") do
+      client.events({ startdatetime: "2024-11-14T00:00:00.000Z", enddatetime: "2024-11-21T00:00:00.000Z" })
+    end
+
+    expect(response[:results].size).to eq(3)
+  end
+
   it "returns my mailbox messages" do
     response = VCR.use_cassette("office365_my_mailbox") { client.messages }
 

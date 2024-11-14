@@ -1,4 +1,5 @@
 # Office 365 (2024) <img src="https://i.ibb.co/g3mpswn/microsoft-office-365-logo-2016-100727915-large.webp" align="right" width="250" height="150">
+
 A simple ruby library to interact with Microsoft Graph **[Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)** and Office 365 API
 
 ## Installation
@@ -100,6 +101,14 @@ irb(main):005:0> client.events[:results]
 irb(main):005:0> client.events[:next_link]
 ```
 
+**Get my events for the next week**
+
+```ruby
+irb(main):005:0> client.events({ startdatetime: "2024-11-14T00:00:00.000Z", enddatetime: "2024-11-21T00:00:00.000Z" })
+irb(main):005:0> client.events[:results]
+irb(main):005:0> client.events[:next_link]
+```
+
 **Get my event by id**
 
 ```ruby
@@ -107,7 +116,7 @@ irb(main):005:0> client.event('identifier')
 irb(main):005:0> client.event('identifier')[:results]
 ```
 
-Results will return an array even if it is a single result.  
+Results will return an array even if it is a single result.
 
 **Get my mails by access token**
 
@@ -209,7 +218,6 @@ irb(main):005:0> subscription = client.renew_subscription(args)
 ```
 
 will return the subscription object `Office365::Models::Subscription`
-
 
 ## Development
 

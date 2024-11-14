@@ -7,11 +7,23 @@ module Office365
     module Event
       include Concerns::Base
       BASE_URI = "/me/events"
+      CALENDARVIEW_URL = "/me/calendarview"
 
       # params: args => { next_link: (nil / next_page_url) }
+      #   startdatetime: 2024-11-14T07:59:41.313Z
+      #   enddatetime: 2024-11-21T07:59:41.313Z
       # response { results: [], next_link: '...' }
       def events(args = {})
-        wrap_results(args.merge(kclass: Models::Event, base_uri: BASE_URI))
+        if args[:startdatetime] && args[:enddatetime]
+          wrap_results(
+            kclass: Models::Event,
+            base_uri: CALENDARVIEW_URL,
+            startdatetime: args[:startdatetime],
+            enddatetime: args[:enddatetime]
+          )
+        else
+          wrap_results(args.merge(kclass: Models::Event, base_uri: BASE_URI))
+        end
       end
 
       def event(identifier)
